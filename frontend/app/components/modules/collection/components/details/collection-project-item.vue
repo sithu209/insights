@@ -75,6 +75,9 @@ SPDX-License-Identifier: MIT
           v-else
           :score="project.healthScoreV2 ?? 0"
           :health-label="project.healthLabel"
+          :maintainer-health-score-v2="project.maintainerHealthScoreV2"
+          :security-supply-chain-score-v2="project.securitySupplyChainScoreV2"
+          :development-activity-score-v2="project.developmentActivityScoreV2"
         />
       </td>
       <td class="py-4 px-2 whitespace-nowrap">
@@ -170,6 +173,9 @@ SPDX-License-Identifier: MIT
             :score="project.healthScoreV2 ?? 0"
             :health-label="project.healthLabel"
             :unavailable="isHealthScoreUnavailable"
+            :maintainer-health-score-v2="project.maintainerHealthScoreV2"
+            :security-supply-chain-score-v2="project.securitySupplyChainScoreV2"
+            :development-activity-score-v2="project.developmentActivityScoreV2"
           />
           <lfx-collection-impact-score-pill
             :score="props.project.impactScore"
